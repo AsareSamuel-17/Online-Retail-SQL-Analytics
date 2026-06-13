@@ -30,3 +30,7 @@ GitHub
 -5,000 orders
 -12,000 order details
 
+# Business Questions Answered
+Top customers by revenue
+Revenue by category
+
