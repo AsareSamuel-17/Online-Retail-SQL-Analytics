@@ -1,0 +1,24 @@
+product_id,product_name,category,price
+101,Laptop,Electronics,164.14
+102,Smartphone,Electronics,619.43
+103,Tablet,Electronics,897.52
+104,Monitor,Electronics,877.53
+105,Headphones,Electronics,1000.68
+106,Keyboard,Electronics,160.99
+107,Webcam,Electronics,985.14
+108,Smartwatch,Electronics,481.98
+109,Office Chair,Furniture,610.59
+110,Desk,Furniture,1289.82
+111,Bookshelf,Furniture,33.36
+112,Coffee Table,Furniture,890.85
+113,Cabinet,Furniture,906.1
+114,Gaming Mouse,Accessories,607.06
+115,USB Hub,Accessories,370.8
+116,Phone Case,Accessories,367.32
+117,Charger,Accessories,1327.89
+118,Laptop Sleeve,Accessories,674.2
+119,Lamp,Home,509.72
+120,Air Purifier,Home,684.19
+121,Blender,Home,1010.7
+122,Vacuum Cleaner,Home,235.72
+123,Kettle,Home,685.16
