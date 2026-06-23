@@ -145,3 +145,34 @@ JOIN Products p
     ON od.product_id = p.product_id
 GROUP BY p.product_name
 ORDER BY total_revenue DESC;
+
+
+
+#Find high-performing products that bring in significant revenue. Products that generated more than $50,000 revenue
+SELECT
+    p.product_name,
+    SUM(p.price * od.quantity) AS total_revenue
+FROM Order_Details od
+JOIN Products p
+    ON od.product_id = p.product_id
+GROUP BY p.product_name
+HAVING total_revenue > 50000
+ORDER BY total_revenue DESC;
+
+#Customers who spent more than average, Find customers who are high-value spenders compared to the overall customer base.
+
+WITH customer_spending AS (
+    SELECT
+        o.customer_id,
+        SUM(p.price * od.quantity) AS total_spent
+    FROM Orders o
+    JOIN Order_Details od
+        ON o.order_id = od.order_id
+    JOIN Products p
+        ON od.product_id = p.product_id
+    GROUP BY o.customer_id
+)
+SELECT *
+FROM customer_spending
+WHERE total_spent > (SELECT AVG(total_spent) FROM customer_spending)
+ORDER BY total_spent DESC;
